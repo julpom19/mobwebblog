@@ -718,12 +718,41 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
 }
 
 .widget select {
 	max-width: 100%;
 }
+
+.widget ul{
+	margin: 0;
+	-webkit-padding-start: 0; /*bad*/
+	list-style: none;
+}
+
+.widget a {
+	color: #3b3b3b;
+	text-decoration: none;
+
+}
+
+.widget li {
+	border-bottom: 1px solid silver;
+	/*padding: 2px;*/
+}
+
+.widget a:hover {
+	color: #000000;
+}
+
+.cat-item {
+	display: inline-block;
+	padding: 5gipx;
+	margin: 5px;
+	border-radius: 4px;
+	background-color: #ffd7bd;
+}
+
 
 /*--------------------------------------------------------------
 # Content
@@ -737,6 +766,7 @@ a:hover, a:active {
 
 .content-area {
 	width: 70%;
+
 }
 
 .site-main {
@@ -812,28 +842,7 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
-.cat-item {
-	display: inline-block;
-	padding: 5px;
-	margin: 2px;
-	border-radius: 4px;
-	background-color: #ffd7bd;
-}
 
-.cat-item a {
-	color: #3b3b3b;
-	text-decoration: none;
-}
-
-.widget_categories {
-	padding: 0;
-}
-
-.widget ul{
-	margin: 0;
-	-webkit-padding-start: 0; /*bad*/
-	list-style: none;
-}
 
 
 
