@@ -14,11 +14,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mobwebblog' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Ой! Кажется, такой страницы не существует...', 'mobwebblog' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'mobwebblog' ); ?></p>
+					<p><?php esc_html_e( 'Кажется, что по этому адресу ничего нет. Попробуйте одну из предложенных ссылок или воспользуйтесь формой поиска', 'mobwebblog' ); ?></p>
 
 					<?php
 						get_search_form();
@@ -44,7 +44,7 @@ get_header(); ?>
 					<?php
 
 						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'mobwebblog' ), convert_smilies( ':)' ) ) . '</p>';
+						$archive_content = '<p>' . sprintf( esc_html__( 'Попробуйте поискать в архивах. %1$s', 'mobwebblog' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );

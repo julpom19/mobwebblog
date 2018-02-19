@@ -81,6 +81,9 @@ if ( ! function_exists( 'mobwebblog_setup' ) ) :
 		) );
 	}
 endif;
+
+
+
 add_action( 'after_setup_theme', 'mobwebblog_setup' );
 
 /**
@@ -136,6 +139,8 @@ require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
+ *
+ *
  */
 require get_template_directory() . '/inc/template-tags.php';
 
@@ -155,4 +160,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+
 

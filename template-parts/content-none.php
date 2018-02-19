@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'mobwebblog' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Ничего не найдено', 'mobwebblog' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,7 +22,7 @@
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'mobwebblog' ),
+						__( 'Готовы написать свой первый пост? <a href="%1$s">Начните отсюда</a>.', 'mobwebblog' ),
 						array(
 							'a' => array(
 								'href' => array(),
@@ -35,13 +35,13 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'mobwebblog' ); ?></p>
+			<p><?php esc_html_e( 'Извините, но по вашему запросу ничего не найдено. Пожалуйста, попробуйте ввести другие ключевые слова.', 'mobwebblog' ); ?></p>
 			<?php
 				get_search_form();
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'mobwebblog' ); ?></p>
+			<p><?php esc_html_e( 'Кажется, мы не можем найти то, что вы ищете. Пожалуйста, воспользуйтесь формой поиска.', 'mobwebblog' ); ?></p>
 			<?php
 				get_search_form();
 

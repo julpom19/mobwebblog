@@ -40,7 +40,13 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			//the_posts_navigation();
+//            if(function_exists('wp_paginate')):
+//                wp_paginate();
+//            else :
+//                the_posts_navigation();
+//            endif;
+            //wp_paginate();
 
 		else :
 

@@ -36,8 +36,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
-	## Articles
 	## Comments
+	## Pagination
 # Infinite scroll
 # Media
 	## Captions
@@ -745,12 +745,48 @@ a:hover, a:active {
 	color: #000000;
 }
 
+/*Поиск*/
+
+.search-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-form > label {
+	width: calc(100% - 80px);
+}
+
+.search-field {
+	width: 100%;
+}
+
+.search-submit {
+	width: 70px;
+}
+
+/*Свежие записи*/
+
+.widget_recent_entries a {
+	color: #535353;
+}
+
+.widget_recent_entries a:hover{
+	color: #000;
+}
+
+/*Рубрики*/
+
 .cat-item {
 	display: inline-block;
-	padding: 5gipx;
+	padding: 5px;
 	margin: 5px;
 	border-radius: 4px;
 	background-color: #ffd7bd;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.cat-item:hover {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
 }
 
 
@@ -766,35 +802,18 @@ a:hover, a:active {
 
 .content-area {
 	width: 70%;
-
-}
-
-.site-main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
 }
 
 .widget-area {
 	width: 30%;
 }
 
-.entry-title {
-	margin: 0;
-	padding: 10px;
-	margin-bottom: 10px;
+.site-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
-.entry-title a {
-	text-decoration: none;
-	color: #111111;
-	font-family: 'Lato', sans-serif;
-	font-weight: 500;
-}
-
-.entry-content {
-	font-family: 'Roboto Slab', serif;
-}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -816,12 +835,59 @@ a:hover, a:active {
 	margin: 1.5em 0 0;
 }
 
+.page-header {
+	width: 100%;
+}
+
+.page-title {
+	font-size: 1.8em;
+}
+
+.entry-title {
+	margin: 0;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.entry-title a {
+	text-decoration: none;
+	color: #111111;
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 500;
+}
+
+.entry-content {
+	font-family: 'Roboto Slab', serif;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 45%;
+	padding: 10px 10px 30px;
+	background: #fff;
+	border-radius: 2px;
+	margin: 1rem;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.post:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 .tags-links, .cat-links {
 	display: inline-block;
 	padding: 5px;
 	margin: 2px;
 	border-radius: 4px;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
 
+.cat-links:hover, .tags-links:hover {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
 }
 
 .tags-links {
@@ -842,30 +908,9 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
-
-
-
-
 /*--------------------------------------------------------------
-## Articles
+## Pagination
 --------------------------------------------------------------*/
-.post {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 45%;
-	padding: 10px 10px 30px;
-	background: #fff;
-	border-radius: 2px;
-	margin: 1rem;
-	position: relative;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.post:hover {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
 
 
 /*--------------------------------------------------------------

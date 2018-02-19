@@ -102,11 +102,11 @@ msgstr ""
 
 #: search.php:21
 #. translators: %s: search query.
-msgid "Search Results for: %s"
+msgid "Результаты поиска: %s"
 msgstr ""
 
 #: template-parts/content-none.php:14
-msgid "Nothing Found"
+msgid "По Вашему запросу ничего не найдено"
 msgstr ""
 
 #: template-parts/content-none.php:25
@@ -116,8 +116,8 @@ msgstr ""
 
 #: template-parts/content-none.php:38
 msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+"Извините, но по вашему запросу ничего не найдено. Пожалуйста, "
+"попробуйте ввести другие ключевые слова."
 msgstr ""
 
 #: template-parts/content-none.php:44
