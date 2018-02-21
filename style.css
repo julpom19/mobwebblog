@@ -28,7 +28,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Elements
 # Forms
 # Navigation
-	## Links
 	## Menus
 # Accessibility
 # Alignments
@@ -37,7 +36,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Content
 	## Posts and pages
 	## Comments
-	## Pagination
+	## Single post
 # Infinite scroll
 # Media
 	## Captions
@@ -267,7 +266,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: Georgia,Cambria,"Times New Roman",Times,serif;;
+	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -275,6 +274,10 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+}
+
+a {
+	color: #404040;
 }
 
 p {
@@ -505,26 +508,6 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 
-
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-
-/*a:visited {*/
-	/*color: purple;*/
-/*}*/
-
-/*a:hover, a:focus, a:active {*/
-	/*color: midnightblue;*/
-/*}*/
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover, a:active {
-	outline: 0;
-}
 
 /*--------------------------------------------------------------
 ## Menus
@@ -796,22 +779,30 @@ a:hover, a:active {
 
 .site-content {
 	display: flex;
+	justify-content: space-between;
 	width: 94%;
 	margin: 0 3%;
+	border: 1px solid red;
+}
+
+.site-content > div,
+.site-content > aside {
+	border: 1px solid;
 }
 
 .content-area {
-	width: 70%;
+	max-width: 70%;
+	margin-right: 40px;
 }
 
 .widget-area {
-	width: 30%;
+	max-width: 300px;
 }
 
 .site-main {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: flex-end;
 }
 
 /*--------------------------------------------------------------
@@ -822,7 +813,7 @@ a:hover, a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 }
 
 .updated:not(.published) {
@@ -832,7 +823,7 @@ a:hover, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	/*margin: 1.5em 0 0;*/
 }
 
 .page-header {
@@ -852,29 +843,29 @@ a:hover, a:active {
 .entry-title a {
 	text-decoration: none;
 	color: #111111;
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
 	font-weight: 500;
 }
 
 .entry-content {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Open Sans', serif;
 }
 
-.post {
+.post-card {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 45%;
+	width: 50%;
 	padding: 10px 10px 30px;
+	margin-bottom: 20px;
 	background: #fff;
 	border-radius: 2px;
-	margin: 1rem;
 	position: relative;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.post:hover {
+.post-card:hover {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -908,10 +899,25 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
+
+
 /*--------------------------------------------------------------
-## Pagination
+## Single post
 --------------------------------------------------------------*/
 
+.single-post {
+
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.single-post article {
+	max-width: 740px;
+}
+
+.single-post article a {
+	text-decoration: underline;
+}
 
 /*--------------------------------------------------------------
 ## Comments
